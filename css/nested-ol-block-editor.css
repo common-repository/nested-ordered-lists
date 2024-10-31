@@ -1,0 +1,52 @@
+.editor-styles-wrapper ol,
+.editor-styles-wrapper ul {
+	border: 1px dotted hotpink;
+}
+.editor-styles-wrapper ol {
+	counter-reset: level1;
+	margin: 0.8em 0 0.8em 1.4em;
+}
+.editor-styles-wrapper ol ol {
+	border-right: none;
+	counter-reset: level2;
+}
+.editor-styles-wrapper ol ol ol {
+	counter-reset: level3;
+}
+.editor-styles-wrapper ol > li {
+	list-style-type: none;
+	line-height: 1.4;
+	margin: 0.8em 0 0 1em;
+	text-indent: -1.5em;
+}
+.editor-styles-wrapper ol > li:before {
+	content: counter(level1, decimal) ". ";
+	counter-increment: level1;
+	display: inline-block;
+	text-align: right;
+	text-transform: none;
+	margin-right: 0.5em;
+	width: 1em;
+	white-space: nowrap;
+}
+.editor-styles-wrapper ol ol > li:before {
+	content: counter(level2, lower-alpha) ". ";
+	counter-increment: level2;
+}
+.editor-styles-wrapper ol ol ol > li:before {
+	content: counter(level3, lower-roman) ". ";
+	counter-increment: level3;
+}
+.editor-styles-wrapper ul {
+	margin: 0.8em 0 0.8em 1.4em;
+}
+.editor-styles-wrapper ul > li {
+	list-style-type: disc;
+	text-indent: 0;
+}
+.editor-styles-wrapper ul ul > li {
+	list-style-type: circle;
+}
+.editor-styles-wrapper ul ul ul > li {
+	list-style-type: square;
+}
